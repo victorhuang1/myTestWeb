@@ -8,12 +8,12 @@ const bcrypt = require('bcrypt')
 const UserSchema = new Schema({
     username:{
         type:String,
-        required:true,
+        required:[true,'Pls provide your username'],
         unique:true
     },
     password:{
         type:String,
-        required:true
+        required:[true,'Pls provide your password']
     }
 })
 

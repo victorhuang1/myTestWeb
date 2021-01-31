@@ -36,13 +36,20 @@
           <div class="control-group">
             <div class="form-group floating-label-form-group controls">
               <label>Description</label>
-              <textarea rows="5" class="form-control" id="body" name="body"></textarea>
+              <textarea id="body" class="form-control" id="body" name="body"></textarea>
+              <script>
+                $('#body').summernote({
+                  placeholder:"Pls input description here",
+                  tabsize:2,
+                  height:200
+                });
+              </script>
             </div>
           </div>
           <div class="control-group">
             <div class="form-group floating-label-form-group controls">
               <label>Images</label>
-              <input type="file" class="form-control" id="image" name="image">
+              <input type="file" class="form-control" id="image" name="image">              
             </div>
           </div>
           <br>
