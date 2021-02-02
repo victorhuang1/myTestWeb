@@ -48,7 +48,7 @@ app.use(fileUpload())
 app.use('/posts/store',validateMiddleWare)
 //mongoose.connect('mongodb://localhost/my_database',{useNewUrlParser:true})
 
-mongoose.connect('mongodb+srv://user0001:P0r7yx1y6YliR88O@cluster0.qbhot.mongodb.net/test',{useNewUrlParser:true})
+mongoose.connect('mongodb+srv://xxxxxx:xxxxxx@cluster0.qbhot.mongodb.net/test',{useNewUrlParser:true})
 
 app.set('view engine','ejs')
 app.use(express.static('public'))
