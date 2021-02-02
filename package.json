@@ -22,7 +22,7 @@
   "license": "MIT",
   "engines":{
     "node":"14.15.4"
-  }
+  },
   "author": "Start Bootstrap",
   "contributors": [
     "David Miller (https://davidmiller.io/)"
