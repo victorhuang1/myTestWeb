@@ -46,7 +46,10 @@ app.get('/auth/logout',logOutController)
 
 app.use(fileUpload())
 app.use('/posts/store',validateMiddleWare)
-mongoose.connect('mongodb://localhost/my_database',{useNewUrlParser:true})
+//mongoose.connect('mongodb://localhost/my_database',{useNewUrlParser:true})
+
+mongoose.connect('mongodb+srv://user0001:P0r7yx1y6YliR88O@cluster0.qbhot.mongodb.net/test',{useNewUrlParser:true})
+
 app.set('view engine','ejs')
 app.use(express.static('public'))
 app.use(bodyParser.json())
@@ -123,11 +126,19 @@ app.post('/users/login', redirectIfAuthenticatedMiddleware, loginUserController)
 
 app.use((req,res) => res.render('404'))
 
-app.listen(4000,function () {   
+/* app.listen(4000,function () {   
         console.log("App listening on port 4000")
-    })
+    }) */
 
-function newFunction() {
-    alert('Pls do not leave blank')
+let port = process.env.PORT;
+if(port == null||port == ""){
+    port = 4000;
 }
+app.listen(port,()=>{
+    console.log("App listening...")
+})
+
+/* function newFunction() {
+    alert('Pls do not leave blank')
+} */
 
