@@ -138,7 +138,4 @@ app.listen(port,()=>{
     console.log("App listening...")
 })
 
-/* function newFunction() {
-    alert('Pls do not leave blank')
-} */
 
